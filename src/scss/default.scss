@@ -1,0 +1,40 @@
+body {
+	background-color: $bgColor;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 400;
+}
+
+h1,
+h2 {
+	font-family: 'Oxanium';
+	font-style: normal;
+	font-weight: 700;
+	line-height: 130px;
+	color: $whiteTextColor;
+
+	span {
+		color: $accentColor;
+	}
+}
+
+h1 {
+	font-size: 85px;
+}
+
+h2 {
+	font-size: 64px;
+}
+
+.button {
+	display: inline-block;
+	background: $primaryColor;
+	border: 1px solid $accentColor;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 35px;
+	letter-spacing: 0.05em;
+	color: $whiteTextColor;
+}
