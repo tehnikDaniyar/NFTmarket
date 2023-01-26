@@ -1,13 +1,13 @@
 body {
 	background-color: $bgColor;
-	font-family: 'Work Sans';
+	font-family: WorkSans;
 	font-style: normal;
 	font-weight: 400;
 }
 
 h1,
 h2 {
-	font-family: 'Oxanium';
+	font-family: Oxanium;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 130px;
@@ -30,11 +30,22 @@ h2 {
 	display: inline-block;
 	background: $primaryColor;
 	border: 1px solid $accentColor;
-	font-family: 'Work Sans';
+	font-family: WorkSans;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 30px;
 	line-height: 35px;
 	letter-spacing: 0.05em;
 	color: $whiteTextColor;
+
+	&:hover {
+		background-color: $accentColor;
+		color: #000;
+	}
+}
+
+.container {
+	max-width: 1405px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
