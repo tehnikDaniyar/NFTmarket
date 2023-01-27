@@ -14,3 +14,6 @@ import {
 import AOS from "aos";
 
 flsFunctions.isWebp();
+
+import * as burger from "./modules/burger.js";
+burger.burger();
