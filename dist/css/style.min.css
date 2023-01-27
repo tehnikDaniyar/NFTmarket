@@ -119,14 +119,6 @@ select {
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 body {
   background-color: #1C121F;
   font-family: WorkSans;
@@ -157,7 +149,7 @@ h2 {
 
 .button {
   display: inline-block;
-  background: rgba(233, 215, 167, 0.1);
+  background-color: rgba(233, 215, 167, 0.1);
   border: 1px solid #FFCE4E;
   font-family: WorkSans;
   font-style: normal;
@@ -170,6 +162,7 @@ h2 {
 .button:hover {
   background-color: #FFCE4E;
   color: #000;
+  transition: all 0.3s linear;
 }
 
 .container {
@@ -196,7 +189,6 @@ h2 {
 }
 .header__menu {
   flex: 1 1 100%;
-  transition: all 0.3s linear;
 }
 @media (max-width: 900px) {
   .header__menu {
@@ -210,6 +202,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: left 0.3s;
   }
   .header__menu ul {
     flex-direction: column;
@@ -246,39 +239,36 @@ h2 {
   color: #FFCE4E;
   padding: 20px 30px;
 }
+@media (max-width: 600px) {
+  .header__button {
+    display: none;
+  }
+}
 .header__burger {
   position: relative;
   display: block;
   width: 22px;
   height: 16px;
+}
+.header__burger::before, .header__burger::after,
+.header__burger span {
+  content: "";
+  height: 3px;
+  background-color: #FFCE4E;
+  position: absolute;
+  left: 0;
+  width: 100%;
   transition: all 0.3s linear;
 }
 .header__burger span {
-  height: 3px;
-  background-color: #FFCE4E;
-  position: absolute;
   top: 50%;
-  left: 0;
-  width: 100%;
   transform: translateY(-50%);
 }
 .header__burger::before {
-  content: "";
-  height: 3px;
-  background-color: #FFCE4E;
-  position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
 }
 .header__burger::after {
-  content: "";
-  height: 3px;
-  background-color: #FFCE4E;
-  position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
 }
 @media (min-width: 900px) {
   .header__burger {
@@ -287,10 +277,10 @@ h2 {
 }
 .header__burger.active::before {
   background-color: #1C121F;
-  transform: rotate(-45deg) translateY(8px);
+  transform: rotate(-45deg) translateY(9px);
 }
 .header__burger.active::after {
-  transform: rotate(45deg) translateY(-10px);
+  transform: rotate(45deg) translateY(-9px);
   background-color: #1C121F;
 }
 .header__burger.active span {

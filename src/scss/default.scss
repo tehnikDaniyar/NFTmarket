@@ -28,7 +28,7 @@ h2 {
 
 .button {
 	display: inline-block;
-	background: $primaryColor;
+	background-color: $primaryColor;
 	border: 1px solid $accentColor;
 	font-family: WorkSans;
 	font-style: normal;
@@ -41,6 +41,7 @@ h2 {
 	&:hover {
 		background-color: $accentColor;
 		color: #000;
+		transition: all 0.3s linear;
 	}
 }
 
