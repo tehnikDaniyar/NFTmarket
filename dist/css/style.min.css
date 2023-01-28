@@ -222,14 +222,29 @@ h2 {
   gap: 64px;
 }
 .header__link {
+  position: relative;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.02em;
   color: #F5FBF2;
 }
+.header__link::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: #FFCE4E;
+  bottom: -10px;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.1s linear;
+}
 .header__link:hover {
   color: #FFCE4E;
+}
+.header__link:hover::after {
+  transform: scaleX(100%);
 }
 .header__button {
   flex: 0 0 auto;
