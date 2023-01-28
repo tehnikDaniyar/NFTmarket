@@ -41,6 +41,7 @@ const build = gulp.series(reset, mainScript);
 const deployZIP = gulp.series(reset, mainScript, zip);
 
 //=====exports==============
+export { images };
 export { svgSprive };
 export { dev };
 export { build };
