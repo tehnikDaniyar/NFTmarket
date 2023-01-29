@@ -19,7 +19,7 @@ h2 {
 }
 
 h1 {
-	font-size: 85px;
+	font-size: clamp(2.625rem, calc(1.832rem + 3.96vw), 5.313rem);
 }
 
 h2 {
