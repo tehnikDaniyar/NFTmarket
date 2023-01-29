@@ -1,6 +1,6 @@
 .top {
 	position: relative;
-	min-height: 1063px;
+	min-height: 1065px;
 
 	//.top__shineDecoreYellow
 	&__shineDecoreYellow {
@@ -48,21 +48,21 @@
 	&__info {
 		padding: 240px 0 0 0;
 		flex: 0 1 50%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
 
 		@media (max-width:900px) {
-			align-items: center;
+			padding: 200px 0 0 0;
 		}
 	}
 
 	// .top__title
 
 	&__title {
+		margin-bottom: 80px;
 
 		@media (max-width:900px) {
 			text-align: center;
+			margin-bottom: 50px;
+
 		}
 	}
 
@@ -70,28 +70,29 @@
 
 	&__buttons {
 		display: flex;
-		justify-content: space-between;
-		flex: 0 1 562px;
+		gap: 48px;
+		margin-bottom: 120px;
 
-		// @media (min-width:900px) and (max-width:1120px) {
-		// 	flex-direction: column;
-		// 	text-align: center;
-		// 	gap: 30px;
-		// }
+		@media (max-width:900px) {
+			gap: 20px;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
 	}
 
 	// .top__button
 
 	&__button {
+		display: block;
 		font-family: Work Sans;
 		font-style: normal;
 		font-weight: 600;
-		font-size: 28px;
+		font-size: clamp(1.125rem, calc(0.941rem + 0.92vw), 1.75rem);
 		color: $whiteTextColor;
-		flex: 0 1 254px;
-		height: 84px;
+		height: clamp(3.375rem, calc(2.822rem + 2.76vw), 5.25rem);
 		text-align: center;
-		line-height: 84px;
+		line-height: clamp(3.375rem, calc(2.822rem + 2.76vw), 5.25rem);
+		flex: 0 1 254px;
 	}
 
 	// .top__progress
@@ -100,10 +101,18 @@
 		display: flex;
 		justify-content: space-between;
 
-		@media (max-width:1120px) {
-			flex-direction: column;
-			padding-top: 30px;
+		@media (max-width:500px) {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			padding: 0 20px;
 		}
+
+		// @media (max-width:1120px) {
+		// 	flex-direction: column;
+		// 	padding-top: 30px;
+		// }
 	}
 
 	// .top__progress-item
@@ -118,7 +127,7 @@
 		font-family: 'Oxanium';
 		font-style: normal;
 		font-weight: 700;
-		font-size: 62px;
+		font-size: clamp(2.25rem, calc(1.771rem + 2.4vw), 3.875rem);
 		line-height: 78px;
 		color: #F5FBF2;
 	}
@@ -140,12 +149,15 @@
 		padding: 240px 0 0 0;
 		flex: 0 1 40.65%;
 
+		@media (max-width:900px) {
+			padding: 55px 0 0 0;
+		}
 	}
 
 	// .top__banner
 
 	&__banner {
-		height: 718px;
+		height: clamp(23.438rem, calc(17.115rem + 31.61vw), 44.875rem);
 	}
 }
 
@@ -185,7 +197,7 @@
 		font-family: Oxanium;
 		font-style: normal;
 		font-weight: 500;
-		font-size: 18px;
+		font-size: clamp(1rem, calc(0.963rem + 0.18vw), 1.125rem);
 		line-height: 22px;
 		letter-spacing: 0.08em;
 		text-transform: capitalize;
@@ -198,7 +210,7 @@
 		font-family: Oxanium;
 		font-style: normal;
 		font-weight: 700;
-		font-size: 32px;
+		font-size: clamp(1.375rem, calc(1.191rem + 0.92vw), 2rem);
 		line-height: 40px;
 		color: #FFFFFF;
 	}
@@ -208,7 +220,7 @@
 	&__footer {
 		position: absolute;
 		width: 100%;
-		min-height: 142px;
+		height: clamp(5.125rem, calc(4.019rem + 5.53vw), 8.875rem);
 		background: $whiteTextColor;
 		bottom: 0;
 		left: 0;
@@ -217,9 +229,9 @@
 		justify-content: space-between;
 		align-items: center;
 
-		@media (max-width:1120px) {
-			flex-direction: column;
-		}
+		// @media (max-width:1120px) {
+		// 	flex-direction: column;
+		// }
 	}
 
 	// .banner__footer-item
@@ -232,7 +244,7 @@
 		font-family: Oxanium;
 		font-style: normal;
 		font-weight: 600;
-		font-size: 28px;
+		font-size: clamp(0.875rem, calc(0.617rem + 1.29vw), 1.75rem);
 		line-height: 35px;
 		letter-spacing: 0.07em;
 		color: #16091B;
@@ -244,7 +256,7 @@
 		font-family: Work Sans;
 		font-style: normal;
 		font-weight: 400;
-		font-size: 24px;
+		font-size: clamp(0.875rem, 0.691rem + 0.92vw, 1.5rem);
 		line-height: 35px;
 		color: #594D5E;
 	}
@@ -252,15 +264,16 @@
 	// .banner__footer-button
 
 	&__footer-button {
-		padding: 23px 45px;
+		flex: 0 1 121px;
+		height: clamp(2.625rem, calc(2.072rem + 2.76vw), 4.5rem);
 		background: $accentColor;
 		backdrop-filter: blur(22.5px);
 		font-family: Work Sans;
 		font-style: normal;
 		font-weight: 700;
-		font-size: 24px;
-		line-height: 28px;
-
+		font-size: clamp(1rem, calc(0.853rem + 0.74vw), 1.5rem);
+		line-height: clamp(2.625rem, calc(2.072rem + 2.76vw), 4.5rem);
+		text-align: center;
 		color: #000000;
 	}
 

@@ -10,7 +10,7 @@ h2 {
 	font-family: Oxanium;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 130px;
+	line-height: clamp(3.938rem, calc(2.702rem + 6.18vw), 8.125rem);
 	color: $whiteTextColor;
 
 	span {
