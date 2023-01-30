@@ -1,6 +1,6 @@
 .top {
 	position: relative;
-	min-height: 1065px;
+	height: 1065px;
 
 	//.top__shineDecoreYellow
 	&__shineDecoreYellow {
@@ -34,12 +34,12 @@
 	// .top__container
 
 	&__container {
-		display: flex;
-		justify-content: space-between;
-		// gap: 80px;
+		height: 100%;
 
-		@media (max-width:900px) {
-			flex-direction: column;
+		@media (min-width:900px) {
+			display: flex;
+			justify-content: space-between;
+			gap: 30px;
 		}
 	}
 
@@ -47,21 +47,25 @@
 
 	&__info {
 		padding: 240px 0 0 0;
-		flex: 0 1 50%;
+		flex: 0 1 650px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 
 		@media (max-width:900px) {
 			padding: 200px 0 0 0;
+			gap: 30px;
 		}
 	}
 
 	// .top__title
 
 	&__title {
-		margin-bottom: 80px;
+		// margin-bottom: 80px;
 
 		@media (max-width:900px) {
 			text-align: center;
-			margin-bottom: 50px;
+			// margin-bottom: 50px;
 
 		}
 	}
@@ -71,12 +75,12 @@
 	&__buttons {
 		display: flex;
 		gap: 48px;
-		margin-bottom: 120px;
+		// margin-bottom: 120px;
 
 		@media (max-width:900px) {
 			gap: 20px;
 			justify-content: center;
-			margin-bottom: 20px;
+			// margin-bottom: 20px;
 		}
 	}
 
@@ -89,10 +93,12 @@
 		font-weight: 600;
 		font-size: clamp(1.125rem, calc(0.941rem + 0.92vw), 1.75rem);
 		color: $whiteTextColor;
+		// padding: 24px 76px;
 		height: clamp(3.375rem, calc(2.822rem + 2.76vw), 5.25rem);
 		text-align: center;
 		line-height: clamp(3.375rem, calc(2.822rem + 2.76vw), 5.25rem);
 		flex: 0 1 254px;
+
 	}
 
 	// .top__progress
@@ -147,7 +153,7 @@
 
 	&__content {
 		padding: 240px 0 0 0;
-		flex: 0 1 40.65%;
+		flex: 0 1 555px;
 
 		@media (max-width:900px) {
 			padding: 55px 0 0 0;
@@ -157,7 +163,9 @@
 	// .top__banner
 
 	&__banner {
-		height: clamp(23.438rem, calc(17.115rem + 31.61vw), 44.875rem);
+		// height: clamp(23.438rem, calc(17.115rem + 31.61vw), 44.875rem);
+		height: clamp(23.438rem, calc(15.71rem + 38.64vw), 44.688rem);
+		// height: 715px;
 	}
 }
 
@@ -167,6 +175,11 @@
 	position: relative;
 	display: grid;
 	grid-template: repeat(2, auto) / repeat(2, auto);
+
+	@media (max-width:900px) {
+		width: 87.5%;
+		margin: 0 auto;
+	}
 
 	// .banner__header
 

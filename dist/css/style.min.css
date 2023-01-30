@@ -309,7 +309,7 @@ h2 {
 
 .top {
   position: relative;
-  min-height: 1065px;
+  height: 1065px;
 }
 .top__shineDecoreYellow {
   position: absolute;
@@ -337,42 +337,41 @@ h2 {
   }
 }
 .top__container {
-  display: flex;
-  justify-content: space-between;
+  height: 100%;
 }
-@media (max-width: 900px) {
+@media (min-width: 900px) {
   .top__container {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
   }
 }
 .top__info {
   padding: 240px 0 0 0;
-  flex: 0 1 50%;
+  flex: 0 1 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media (max-width: 900px) {
   .top__info {
     padding: 200px 0 0 0;
+    gap: 30px;
   }
-}
-.top__title {
-  margin-bottom: 80px;
 }
 @media (max-width: 900px) {
   .top__title {
     text-align: center;
-    margin-bottom: 50px;
   }
 }
 .top__buttons {
   display: flex;
   gap: 48px;
-  margin-bottom: 120px;
 }
 @media (max-width: 900px) {
   .top__buttons {
     gap: 20px;
     justify-content: center;
-    margin-bottom: 20px;
   }
 }
 .top__button {
@@ -421,7 +420,7 @@ h2 {
 }
 .top__content {
   padding: 240px 0 0 0;
-  flex: 0 1 40.65%;
+  flex: 0 1 555px;
 }
 @media (max-width: 900px) {
   .top__content {
@@ -429,13 +428,19 @@ h2 {
   }
 }
 .top__banner {
-  height: clamp(23.438rem, 17.115rem + 31.61vw, 44.875rem);
+  height: clamp(23.438rem, 15.71rem + 38.64vw, 44.688rem);
 }
 
 .banner {
   position: relative;
   display: grid;
   grid-template: repeat(2, auto)/repeat(2, auto);
+}
+@media (max-width: 900px) {
+  .banner {
+    width: 87.5%;
+    margin: 0 auto;
+  }
 }
 .banner__header {
   position: absolute;
