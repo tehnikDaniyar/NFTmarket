@@ -1,6 +1,8 @@
 .top {
 	position: relative;
-	height: 1065px;
+	min-height: 1065px;
+	display: flex;
+	align-items: center;
 
 	//.top__shineDecoreYellow
 	&__shineDecoreYellow {
@@ -34,12 +36,12 @@
 	// .top__container
 
 	&__container {
-		height: 100%;
+		width: 100%;
 
 		@media (min-width:900px) {
 			display: flex;
 			justify-content: space-between;
-			gap: 30px;
+			gap: 50px;
 		}
 	}
 
@@ -55,6 +57,10 @@
 		@media (max-width:900px) {
 			padding: 200px 0 0 0;
 			gap: 30px;
+		}
+
+		@media (max-width:900px) {
+			padding: 100px 0 0 0;
 		}
 	}
 
@@ -164,7 +170,7 @@
 
 	&__banner {
 		// height: clamp(23.438rem, calc(17.115rem + 31.61vw), 44.875rem);
-		height: clamp(23.438rem, calc(15.71rem + 38.64vw), 44.688rem);
+		min-height: clamp(23.438rem, calc(15.71rem + 38.64vw), 44.688rem);
 		// height: 715px;
 	}
 }

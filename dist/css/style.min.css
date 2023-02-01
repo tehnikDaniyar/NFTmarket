@@ -309,7 +309,9 @@ h2 {
 
 .top {
   position: relative;
-  height: 1065px;
+  min-height: 1065px;
+  display: flex;
+  align-items: center;
 }
 .top__shineDecoreYellow {
   position: absolute;
@@ -337,13 +339,13 @@ h2 {
   }
 }
 .top__container {
-  height: 100%;
+  width: 100%;
 }
 @media (min-width: 900px) {
   .top__container {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 50px;
   }
 }
 .top__info {
@@ -357,6 +359,11 @@ h2 {
   .top__info {
     padding: 200px 0 0 0;
     gap: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .top__info {
+    padding: 100px 0 0 0;
   }
 }
 @media (max-width: 900px) {
@@ -428,7 +435,7 @@ h2 {
   }
 }
 .top__banner {
-  height: clamp(23.438rem, 15.71rem + 38.64vw, 44.688rem);
+  min-height: clamp(23.438rem, 15.71rem + 38.64vw, 44.688rem);
 }
 
 .banner {
@@ -531,4 +538,29 @@ h2 {
 .banner__decore_down {
   position: relative;
   top: 50%;
+}
+
+.partners {
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .partners {
+    min-height: 280px;
+  }
+}
+.partners__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .partners__container {
+    display: grid;
+    grid-template: repeat(2, auto)/repeat(2, auto);
+  }
 }

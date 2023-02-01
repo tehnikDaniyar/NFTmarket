@@ -1,0 +1,30 @@
+.partners {
+	min-height: 380px;
+	display: flex;
+	align-items: center;
+
+	@media (max-width:600px) {
+		min-height: 280px;
+	}
+
+	// .partners__container
+
+	&__container {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 30px;
+		flex-wrap: wrap;
+
+		@media (max-width:600px) {
+			display: grid;
+			grid-template: repeat(2, auto) / repeat(2, auto);
+			// gap: 20px;
+		}
+	}
+
+	// .partners__item
+
+	&__item {}
+}
