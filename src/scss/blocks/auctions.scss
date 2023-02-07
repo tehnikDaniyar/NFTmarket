@@ -1,8 +1,13 @@
 .auctions {
+	height: 1235px;
 
 	// .auctions__container
 
-	&__container {}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
 	// .auctions__title
 
@@ -10,21 +15,25 @@
 
 	// .auctions__swiper
 
-	&__swiper {}
+	&__swiper {
+		max-width: 100%;
+		overflow: hidden;
+	}
 
 	// .auctions__swiper-wrapper
 
 	&__swiper-wrapper {
 		display: flex;
-		min-width: auto;
+		width: 100%;
 	}
 
 	// .auctions__swiper-slide
 
 	&__swiper-slide {
-		width: 300px;
+		flex: 0 0 50%;
 		height: 400px;
 		background-color: #fff;
+		margin: 0 auto;
 	}
 }
 

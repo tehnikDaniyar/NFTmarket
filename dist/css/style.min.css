@@ -564,12 +564,25 @@ h2 {
     grid-template: repeat(2, auto)/repeat(2, auto);
   }
 }
+.auctions {
+  height: 1235px;
+}
+.auctions__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.auctions__swiper {
+  max-width: 100%;
+  overflow: hidden;
+}
 .auctions__swiper-wrapper {
   display: flex;
-  min-width: auto;
+  width: 100%;
 }
 .auctions__swiper-slide {
-  width: 300px;
+  flex: 0 0 50%;
   height: 400px;
   background-color: #fff;
+  margin: 0 auto;
 }
