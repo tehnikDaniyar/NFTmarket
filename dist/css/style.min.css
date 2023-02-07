@@ -564,3 +564,12 @@ h2 {
     grid-template: repeat(2, auto)/repeat(2, auto);
   }
 }
+.auctions__swiper-wrapper {
+  display: flex;
+  min-width: auto;
+}
+.auctions__swiper-slide {
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+}

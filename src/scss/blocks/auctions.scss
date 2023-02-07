@@ -1,0 +1,39 @@
+.auctions {
+
+	// .auctions__container
+
+	&__container {}
+
+	// .auctions__title
+
+	&__title {}
+
+	// .auctions__swiper
+
+	&__swiper {}
+
+	// .auctions__swiper-wrapper
+
+	&__swiper-wrapper {
+		display: flex;
+		min-width: auto;
+	}
+
+	// .auctions__swiper-slide
+
+	&__swiper-slide {
+		width: 300px;
+		height: 400px;
+		background-color: #fff;
+	}
+}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
