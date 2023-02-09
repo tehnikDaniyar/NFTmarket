@@ -14,6 +14,8 @@ import Swiper from "swiper/bundle";
 export const sliderAuctions = () => {
 	return new Swiper('.swiper', {
 
+		loop: true,
+
 		slidesPerView: 3,
 		spaceBetween: 10,
 

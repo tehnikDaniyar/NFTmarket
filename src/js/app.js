@@ -12,6 +12,7 @@ import * as flsFunctions from "./modules/functions.js";
 // 	Mousewheel
 // } from "swiper";
 import AOS from "aos";
+// import 'swiper/css'
 
 flsFunctions.isWebp();
 
