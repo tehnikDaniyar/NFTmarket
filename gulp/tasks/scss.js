@@ -20,7 +20,7 @@ export const scss = () => {
 		.pipe(sass({
 			outputStyle: 'expanded',
 		}))
-		.pipe(app.plugins.replace(/\/base-setting-for-Gulp\/src\/img/gi, '../img'))
+		.pipe(app.plugins.replace(/(\/src\/)/gi, '../'))
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
