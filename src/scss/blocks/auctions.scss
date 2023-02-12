@@ -33,7 +33,15 @@
 	// .auctions__slide
 
 	&__slide {
-		flex: 0 0 495px;
+		flex: 0 0 33.333%;
+
+		@media (max-width:1100px) {
+			flex: 0 0 50%;
+		}
+
+		@media (max-width:676px) {
+			flex: 0 0 100%;
+		}
 	}
 
 	// .auctions__button
@@ -55,6 +63,10 @@
 		gap: 30px;
 		right: 50px;
 		top: 0px;
+
+		@media (max-width:676px) {
+			display: none;
+		}
 
 		div {
 			height: 54px;
@@ -114,6 +126,10 @@
 
 	&__img {
 		position: relative;
+
+		img {
+			width: 100%;
+		}
 	}
 
 	// .slide__date

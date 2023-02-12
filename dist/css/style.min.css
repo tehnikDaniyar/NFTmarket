@@ -584,7 +584,17 @@ h2 {
   display: flex;
 }
 .auctions__slide {
-  flex: 0 0 495px;
+  flex: 0 0 33.333%;
+}
+@media (max-width: 1100px) {
+  .auctions__slide {
+    flex: 0 0 50%;
+  }
+}
+@media (max-width: 676px) {
+  .auctions__slide {
+    flex: 0 0 100%;
+  }
 }
 .auctions__button {
   font-weight: 500;
@@ -600,6 +610,11 @@ h2 {
   gap: 30px;
   right: 50px;
   top: 0px;
+}
+@media (max-width: 676px) {
+  .auctions__swiper-buttons {
+    display: none;
+  }
 }
 .auctions__swiper-buttons div {
   height: 54px;
@@ -633,6 +648,9 @@ h2 {
 }
 .slide__img {
   position: relative;
+}
+.slide__img img {
+  width: 100%;
 }
 .slide__date {
   position: absolute;
